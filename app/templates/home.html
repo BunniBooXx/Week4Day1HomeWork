@@ -1,0 +1,19 @@
+      {% extends 'index.html' %}
+
+    {% block content %}
+
+
+    <h1> Fav 5 Artists </h1>
+    {% if red == True %}
+    <p style = "color: pink;">{{ message }}</p>
+    {% else %}
+    <p>{{ message }}</p>
+    {% endif %}
+    <ul>
+        {% for artist in artists %}
+        <li>
+            {{ artist }}
+        </li>
+        {% endfor %}
+    </ul>
+    {% endblock %}
